@@ -27,6 +27,104 @@ bash ~/dotfiles/scripts/install-debian.sh
 
 -----------
 
+## SSH setup for GitHub (new system)
+
+SSH allows passwordless `git clone`, `git pull`, and `git push`.  
+This only needs to be done **once per machine**.
+
+This section assumes nothing is set up yet.
+
+---
+
+### 1. Install OpenSSH
+
+#### Arch / CachyOS
+```bash
+sudo pacman -S openssh
+```
+#### Debian
+```bash
+sudo apt install openssh-client
+```
+verify:
+
+```bash
+ssh -V
+```
+
+### 2. Generate an SSH key
+
+Use ed25519 (modern and recommended):
+```bash
+ssh-keygen -t ed25519 -C "github"
+```
+
+When prompted:
+
+File location: press Enter
+
+Passphrase: optional 
+
+This creates:
+```bash
+~/.ssh/id_ed25519        (private key)
+~/.ssh/id_ed25519.pub    (public key)
+```
+
+### 3. Start the SSH agent and add the key
+Bash / Zsh:
+```bash
+eval "$(ssh-agent -s)"
+ssh-add ~/.ssh/id_ed25519
+```
+Fish:
+
+```fish
+ssh-agent -c | sed 's/^echo/set -Ux/' | source
+ssh-add ~/.ssh/id_ed25519
+```
+
+Verify:
+```bash
+ssh-add -l
+```
+
+### 4. Add the public key to GitHub
+
+Copy the key:
+```bash
+cat ~/.ssh/id_ed25519.pub
+```
+On GitHub:
+
+Go to Settings → SSH and GPG keys
+
+Click New SSH key
+
+Paste the key
+
+Save
+
+### 5. Test the SSH connection
+```bash
+ssh -T git@github.com
+```
+
+Expected output:
+```bash
+Hi <username>! You've successfully authenticated, but GitHub does not provide shell access.
+```
+
+This confirms SSH is working.
+
+### 6. Clone the repository using SSH
+```bash
+git clone git@github.com:brandenarc/dotfiles.git ~/dotfiles
+```
+
+----------------------------------------------
+# DOTS
+
 This repository manages my application configs using **GNU Stow**.
 
 Each app has its own folder (e.g. `alacritty/`, `mpv/`, `fish/`) that mirrors `$HOME` paths like `.config/<app>/...`.
