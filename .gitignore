@@ -1,0 +1,17 @@
+# Never track caches/state
+.cache/
+.local/state/
+.local/share/recently-used.xbel
+
+# Editor junk
+*.swp
+*.swo
+*~
+*.bak
+
+# OS junk
+.DS_Store
+
+# Just in case: never commit secrets
+.ssh/
+.gnupg/
