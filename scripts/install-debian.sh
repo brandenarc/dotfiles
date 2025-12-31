@@ -24,7 +24,7 @@ else
 fi
 
 cd "$DOTFILES_DIR"
-stow -R alacritty btop cava celluloid fish ghostty kitty mpv vlc yazi
+bash "$DOTFILES_DIR/scripts/stow-all.sh"
 
 echo "Done."
 #!/usr/bin/env bash
