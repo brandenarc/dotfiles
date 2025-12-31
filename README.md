@@ -113,12 +113,32 @@ git push
 
 ## Updating existing configs and pushing changes
 
+
+### Before making changes (recommended)
+Always sync with GitHub first:
+
+```bash
+cd ~/dotfiles
+git pull --rebase origin main
+```
+
+This:
+
+fetches updates from GitHub
+
+reapplies your local commits on top
+
+avoids merge commits
+
+----- 
+## To edit existing configs and push (we will use mpv as an example):
+
 Edit configs normally (they are symlinks into the repo):
 
 nano ~/.config/mpv/mpv.conf
 
 
-Review changes:
+Review changes (Can be skipped but IF skipped then add "git diff" to the push):
 ```bash
 cd ~/dotfiles
 git status
