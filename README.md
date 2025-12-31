@@ -172,6 +172,11 @@ bash ~/dotfiles/scripts/install-debian.sh
 apt-mark showmanual > ~/dotfiles/packages-debian-apt-explicit.txt
 ```
 
+Generate Flatpak IDs:
+```bash
+flatpak list --app --columns=application > ~/dotfiles/packages-debian-flatpak.txt
+```
+
 ## Apply dotfiles in order to put the configs where they need to be after it has been cloned onto the new system:
 
 ```bash
