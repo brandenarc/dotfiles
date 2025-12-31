@@ -1,0 +1,21 @@
+# DEFAULTS things I like that just work arccrt is a custom crt with transparency respected!
+
+keybind = global:super+shift+enter=new_window
+mouse-hide-while-typing = true
+window-decoration = none
+confirm-close-surface = false
+
+# SHADERS
+
+custom-shader = ~/.config/ghostty/shaders/arccrt.glsl
+custom-shader = ~/.config/ghostty/shaders/bloom.glsl
+#custom-shader = ~/.config/ghostty/shaders/bettercrt.glsl
+#custom-shader = ~/.config/ghostty/shaders/matrix-hallway.glsl
+#custom-shader = ~/.config/ghostty/shaders/arcglitchy.glsl
+
+
+# BACKGROUNDS 
+background-opacity = 0.9
+#background-opacity-cells = true
+#background-blur = true
+#unfocused-split-opacity = 0
