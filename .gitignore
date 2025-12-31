@@ -2,6 +2,7 @@
 .cache/
 .local/state/
 .local/share/recently-used.xbel
+packages-arch-all.txt
 
 # Editor junk
 *.swp
