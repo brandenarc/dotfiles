@@ -87,10 +87,12 @@ efitools
 egl-wayland
 eog
 ethtool
+ex-vi-compat
 exfatprogs
 f2fs-tools
 fastfetch
 ffmpegthumbnailer
+file-roller
 firefox
 flatpak
 foomatic-db
@@ -107,6 +109,7 @@ ghostty-terminfo
 gimp
 git
 glances
+gnome-boxes
 gnome-calculator
 gnome-disk-utility
 gsfonts
@@ -115,6 +118,7 @@ gst-plugin-pipewire
 gst-plugins-bad
 gst-plugins-ugly
 gthumb
+gtk2
 gutenprint
 haveged
 hdparm
@@ -122,7 +126,7 @@ hwdetect
 hwinfo
 inetutils
 inkscape
-iptables-nft
+iptables
 iwd
 jfsutils
 kate
@@ -136,6 +140,7 @@ less
 lib32-nvidia-utils
 lib32-opencl-nvidia
 lib32-vulkan-icd-loader
+libappindicator
 libdvdcss
 libgsf
 libmythes
@@ -189,9 +194,11 @@ nvidia-utils
 obs-studio
 obsidian
 octopi
+okular
 opencl-nvidia
 opencolorio
 openssh
+orca-slicer-bin
 pacman-contrib
 paru
 patchelf
@@ -206,6 +213,10 @@ pokemon-colorscripts-git
 poppler-glib
 power-profiles-daemon
 proton-mail-bin
+proton-pass
+protonplus
+protonup-qt
+pureref
 pv
 pycharm-community-edition
 python
@@ -218,6 +229,7 @@ rsync
 rtkit
 s-nail
 sg3_utils
+shelly
 smartmontools
 snapper
 sof-firmware
@@ -229,6 +241,7 @@ system-config-printer
 systemd-boot-manager
 texinfo
 thunderbird
+torbrowser-launcher
 ttf-bitstream-vera
 ttf-dejavu
 ttf-liberation
@@ -240,7 +253,6 @@ unzip
 upower
 usb_modeswitch
 usbutils
-vi
 vim
 vlc-plugins-all
 vulkan-icd-loader

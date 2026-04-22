@@ -1,1 +1,9 @@
-cogl
+lib32-gst-plugins-base-libs
+lib32-gstreamer
+libgnome-keyring
+libkdcraw5
+orca-slicer-bin
+pureref
+python-backports-zstd
+quazip-qt5
+splix
